@@ -63,8 +63,19 @@ $ mocha
 ```
 
 ### Some testing examples
+* serviceCurrency  
+    ✔ If the currency is USD, should modify price and change the currency to TWD  
+    ✔ If the currency is TWD, Input should stay the same  
+    ✔ If the currency is not TWD or USD, should return "Currency format is wrong"  
+* serviceName  
+    ✔ If the name contains non-English characters, should return "Name contains non-English characters"  
+    ✔ If the name is not capitalized, should return "Name is not capitalized"  
+    ✔ If the name does not contain non-English characters and is capitalized, should pass  
 
-
+* servicePrice  
+    ✔ If the the price is more than 2000, should return "Price is over 2000"  
+    ✔ If the price is less than 2000, should pass  
+    ✔ If the price is euqal to 2000, should pass  
 
 ## SOLID and Design pattern
 Follow the SRP, OCP, DIP in SOLID, and the factory design pattern.
